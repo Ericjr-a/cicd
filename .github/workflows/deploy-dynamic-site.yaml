@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
@@ -25,10 +28,12 @@ jobs:
 
       - name: Run tests
         run: |
+          # Run any tests you have here
           pytest
 
       - name: Build the application
         run: |
+          # Placeholder for build steps (optional)
           echo "Building the Flask app..."
 
       - name: Deploy to DigitalOcean
@@ -42,9 +47,3 @@ jobs:
             pip install -r flask_app/requirements.txt && \
             systemctl restart your-app.service \
           "
-
-      - name: Upload GitHub Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "./*"
-          retention-days: 1
