@@ -25,23 +25,22 @@ jobs:
 
       - name: Run tests
         run: |
-          # Assuming you have test files in your Flask app
+          # Run any tests you have here
           pytest
 
       - name: Build the application
         run: |
-          # Any build steps required for your Flask app can go here
-          # For example, minifying assets or preparing static files
+          # Placeholder for build steps (optional)
           echo "Building the Flask app..."
 
-      - name: Deploy to Digital Ocean
+      - name: Deploy to DigitalOcean
         env:
           DO_TOKEN: ${{ secrets.DIGITALOCEAN_TOKEN }}
         run: |
-          ssh -o StrictHostKeyChecking=no root@<YOUR_DROPLET_IP> " \
-            cd /path/to/your/app && \
+          ssh -o StrictHostKeyChecking=no root@137.184.215.215 "\
+            cd /root/cicd && \
             git pull origin main && \
-            source /path/to/your/venv/bin/activate && \
-            pip install -r requirements.txt && \
+            source /root/cicd/venv/bin/activate && \
+            pip install -r flask_app/requirements.txt && \
             systemctl restart your-app.service \
           "
