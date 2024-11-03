@@ -3,7 +3,7 @@ name: Deploy Static Site to GitHub Pages
 on:
   push:
     branches:
-      - main # Deploy to gh-pages whenever changes are pushed to main
+      - main
 
 jobs:
   deploy:
@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
+
+      - name: Remove unnecessary files
+        run: |
+          rm -rf flask_app/env
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -22,6 +26,6 @@ jobs:
           enable_jekyll: false
           exclude_assets: |
             .github/
-            flask_app/env
-            **/flask_app/env/**
             README.md
+            **/.env
+            **/flask_app/env/**
