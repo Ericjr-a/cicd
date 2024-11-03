@@ -3,13 +3,13 @@ import os
 
 app = Flask(
     __name__,
-    static_folder=".",            # Root directory for static files
+    static_folder=".",           
     template_folder="flask_app/templates"  # Template directory
 )
 
 @app.route('/')
 def home():
-    return render_template('index_flask.html')  # Use index_flask.html for Flask server
+    return render_template('index_flask.html')  
 
 
 
@@ -30,6 +30,11 @@ def eric():
 @app.route('/lois')
 def lois():
     return render_template('loispage.html')
+
+
+@app.route('/lois')
+def lois():
+    return render_template('kiki.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
