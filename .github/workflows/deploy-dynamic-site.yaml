@@ -1,0 +1,47 @@
+name: Deploy Dynamic Website to Digital Ocean
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r flask_app/requirements.txt  # Make sure requirements.txt is in the correct folder
+
+      - name: Run tests
+        run: |
+          # Assuming you have test files in your Flask app
+          pytest
+
+      - name: Build the application
+        run: |
+          # Any build steps required for your Flask app can go here
+          # For example, minifying assets or preparing static files
+          echo "Building the Flask app..."
+
+      - name: Deploy to Digital Ocean
+        env:
+          DO_TOKEN: ${{ secrets.DIGITALOCEAN_TOKEN }}
+        run: |
+          ssh -o StrictHostKeyChecking=no root@<YOUR_DROPLET_IP> " \
+            cd /path/to/your/app && \
+            git pull origin main && \
+            source /path/to/your/venv/bin/activate && \
+            pip install -r requirements.txt && \
+            systemctl restart your-app.service \
+          "
