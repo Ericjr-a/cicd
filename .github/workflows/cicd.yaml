@@ -23,5 +23,5 @@ jobs:
           exclude_assets: |
             .github/
             flask_app/env
-            **/.*                  
+            **/flask_app/env/**
             README.md
