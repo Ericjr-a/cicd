@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - gh-pages
   pull_request:
     branches:
       - main
+      - gh-pages
 
 jobs:
   build-and-deploy:
@@ -42,7 +44,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no root@137.184.215.215 "\
             cd /root/cicd && \
-            git pull origin main && \
+            git pull origin ${{ github.ref_name }} && \
             source /root/cicd/venv/bin/activate && \
             pip install -r flask_app/requirements.txt && \
             systemctl restart your-app.service \
