@@ -3,7 +3,7 @@ name: Deploy Static Site to GitHub Pages
 on:
   push:
     branches:
-      - main # This is the source branch
+      - main # Deploy to gh-pages whenever changes are pushed to main
 
 jobs:
   deploy:
@@ -17,11 +17,11 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages # The branch to deploy to
-          publish_dir: ./ # Adjust if your `index.html` is in a subdirectory
-          enable_jekyll: false # Disable Jekyll for a pure static site
+          publish_branch: gh-pages
+          publish_dir: ./
+          enable_jekyll: false
           exclude_assets: |
             .github/
             flask_app/env
-            **/.*                   # Ignore hidden files
+            **/.*                  
             README.md
