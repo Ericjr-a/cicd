@@ -33,9 +33,9 @@ jobs:
           ssh -o StrictHostKeyChecking=no root@137.184.215.215 "\
             cd /root/cicd && \
             git pull origin main && \
-            python3 -m venv /root/cicd/venv && \
-            source /root/cicd/venv/bin/activate && \
+            if [ ! -d 'venv' ]; then python3 -m venv venv; fi && \
+            source venv/bin/activate && \
             pip install --upgrade pip && \
             pip install -r flask_app/requirements.txt && \
-            systemctl restart your-app.service \
+            systemctl restart your-app.service || echo 'Failed to restart service' \
           "
