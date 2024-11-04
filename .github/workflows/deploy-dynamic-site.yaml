@@ -21,21 +21,18 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r flask_app/requirements.txt  # Make sure requirements.txt is in the correct folder
+          pip install -r flask_app/requirements.txt
 
-      - name: Build the application
-        run: |
-          # Placeholder for build steps (optional)
-          echo "Building the Flask app..."
+      - name: Add SSH key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.DO_SSH_KEY }}
 
       - name: Deploy to DigitalOcean
-        env:
-          DO_TOKEN: ${{ secrets.DIGITALOCEAN_TOKEN }}
         run: |
           ssh -o StrictHostKeyChecking=no root@137.184.215.215 "\
             cd /root/cicd && \
             git pull origin main && \
-            # Set up a fresh virtual environment on the server
             python3 -m venv /root/cicd/venv && \
             source /root/cicd/venv/bin/activate && \
             pip install --upgrade pip && \
