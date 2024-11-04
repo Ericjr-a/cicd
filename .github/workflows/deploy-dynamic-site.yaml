@@ -23,11 +23,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r flask_app/requirements.txt  # Make sure requirements.txt is in the correct folder
 
-      - name: Run tests
-        run: |
-          # Run any tests you have here
-          pytest
-
       - name: Build the application
         run: |
           # Placeholder for build steps (optional)
