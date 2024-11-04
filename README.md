@@ -1,6 +1,10 @@
 # cicd
+
 Group 6
-Eric Afari Dwamena
+Lois Mills
 Joana Aba Mensah
 Nyameye Akumia
-Lois Mills
+Eric Afari Dwamena
+
+Website link (Github pages) : https://ericjr-a.github.io/cicd/
+Extra challenge(link): http://137.184.215.215:8000/
