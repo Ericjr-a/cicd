@@ -11,8 +11,6 @@ app = Flask(
 def home():
     return render_template('index_flask.html')  
 
-
-
 # Serve CSS file
 @app.route('/index.css')
 def serve_css():
@@ -31,9 +29,8 @@ def eric():
 def lois():
     return render_template('loispage.html')
 
-
-@app.route('/lois')
-def lois():
+@app.route('/kiki')
+def kiki(): 
     return render_template('kiki.html')
 
 if __name__ == '__main__':
