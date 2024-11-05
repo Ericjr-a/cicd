@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyameye Akumia CV</title>
+    <style>
+        /* TAGS */
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: black;
+        }
+
+        hr{
+            border-width: 1pt;
+            border-color: black;
+            border-style: solid;
+            margin-bottom: 2px;
+            margin-top: -0.5px;
+        }
+        h1{
+            text-align: center;
+            font-size: 8.5pt;
+            margin-bottom: -5px;
+        }
+        h2{
+            margin-bottom: 0.5px;
+            font-weight: bold;
+        }
+
+        li{
+            margin-top: 0.5;
+        }
+
+        h2, p, li{
+            font-size: 8.5pt;
+        }
+
+        /* CLASSES */
+        .page{
+            width: 21cm;
+            height: 29.7cm;
+            margin: auto;
+            background-color: white;
+            padding-top: 0.21in;
+            padding-bottom: 0.43in;
+            padding-left: 0.75in;
+            padding-right: 0.75in;
+        }
+        .left{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-bottom: 10px;
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            align-items: end;
+            margin-bottom: auto;
+            width: 250px;
+        }
+
+        .section{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            display: flex;
+            width: 100em;
+        }
+        .detailed-item{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-bottom: -10px;
+        }
+        .item-content{
+            margin-bottom: 1px;
+            margin-top: 0.5px;
+        }
+        .position{
+            margin-bottom: -15px;
+            margin-top: 0.5px;
+            font-weight: bold;
+        }
+        .date{
+            margin-bottom: 1px;
+            margin-top: 0.5px;
+            font-weight: bold;
+        }
+        .pure-list{
+            margin-bottom: -10px;
+        }
+
+        .footer{
+            display: flex;
+            width: 100em;
+            flex-direction: column;
+        }
+
+        /* IDs */
+        #name{
+            text-align: center;
+            font-size: 14pt;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "page">
+        <header style="background-color: pink;">
+            <h1>Check out other portfolios</h1>
+            <nav>
+                <ul>
+                     <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('joana') }}">Joana</a></li>
+                    <li><a href="{{ url_for('lois') }}">Lois</a></li>
+                    <li><a href="{{ url_for('eric') }}">Eric</a></li> 
+                </ul>
+            </nav>
+        </header>
+        <div class = "head">
+            <h1 id = "name">Nyameye Akumia</h1>
+            <h1>Postal Address</h1>
+            <h1>+233 55 603 6295 | Ghanaian</h1>
+            <h1>nyameye.akumia@ashesi.edu.gh | kiki.etc@icloud.com</h1>
+        </div>
+        <!-- EDUCATION -->
+        <div>
+            <h2>EDUCATION</h2>
+            <hr>
+            <div class = "section">
+                <div class = "item">
+                    <div class = "left">
+                        <p class="item-content"><b>Ashesi University</b></p>
+                        <p class="item-content"><b>BSc. Computer Science</b></p>
+                        <p class="item-content">Cumulative GPA: 3.50/4.00</p>
+                    </div>
+                    <div class="right">
+                        <p class="item-content"><b>Berekuso, Eastern Region</b></p>
+                        <p class="date">Expected Date of Graduation: June 2025</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="left">
+                        <p class="item-content"><b>International Community School</b></p>
+                        <p class="item-content">*Cambridge Advanced-Level</p>
+                    </div>
+                    <div class="right">
+                        <p class="item-content"><b>Obuasi, Ashanti Region</b></p>
+                        <p class="date">Sept 2017 - July 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ACHIEVEMENTS -->
+        <div>
+            <h2>ACHIEVEMENTS</h2>
+            <hr>
+            <div class = "section">
+                <div class = "item">
+                    <div class = "left">
+                        <p class="item-content"><b>Creative Festival (2nd Place, Prose)</b>, Ashesi University</p>
+                    </div>
+                    <div class="right">
+                        <p class="date">October, 2024</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="left">
+                        <p class="item-content"><b>*Dean's List</b>, Ashesi University College</p>
+                    </div>
+                    <div class="right">
+                        <p class="date">2022 - Present</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WORK EXPERIENCE -->
+        <div>
+            <h2>WORK EXPERIENCE</h2>
+            <hr>
+            <div class="section">
+                <div class="item">
+                    <div class="detailed-item">
+                        <p class="item-content"><b>ABC Children's Home</b> - Cantoments, Accra</p>
+                        <p class="position">Marketing Intern</p>
+                        <ul>
+                            <li>Supervise the planning of the Annual Company Street Festival</li>
+                            <li>Plan a charity event with the aim of raising $3000 to help provide shelter for street children</li>
+                            <li>Update and manage the company's website (increased website traffic by 20%)</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <p class="date">Jun 2013 - Present</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="detailed-item">
+                        <p class="item-content"><b>XYZ Foundation</b> - Dzowulu, Accra</p>
+                        <p class="position">President</p>
+                        <ul>
+                            <li>Managed club and presided over club activities and Editorial Meetings</li>
+                            <li>Organized seminars involving key figures to dialogue on the role of leadership in Africa</li>
+                            <li>Increased membership and developed club programs by 22% and 40% respectively</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <p class="date">Dec 2012 - May 2013</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="detailed-item">
+                        <p class="item-content"><b>Crisps Radio</b> - Abuja, Nigeria</p>
+                        <p class="position">Marketing Executive</p>
+                        <ul>
+                            <li>Assisted the Marketing Manager to expand the market share of company</li>
+                            <li>Wrote jingles, Live Presenter Mentions (LPMs) and promotional announcements</li>
+                            <li>Produced an elite talk show dubbed (Excellent Talk with Excellent Personalities) </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <p class="date">Jun 2012 - Aug 2012</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PROJECTS AND RESEARCH -->
+        <div>
+            <h2>PROJECTS AND RESEARCH</h2>
+            <hr>
+            <div class="section">
+                <div class="item">
+                    <div class="detailed-item">
+                        <p class="item-content"><b>Green Hills Consortium</b></p>
+                        <p class="position">Jambo - Team Member</p>
+                        <ul>
+                            <li>Assisted a global team in designing and implementing a business model to provide digital access to 5.5 billion people living on less than $10 per day using a model that offers free mobile phone service</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <p class="date">Jun 2013 - Present</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CO-CURRICULAR ACTIVITIES -->
+        <div>
+            <h2>CO-CURRICULAR ACTIVITIES</h2>
+            <hr>
+            <div class="section">
+                <div class="item">
+                    <div class="detailed-item">
+                        <p class="item-content"><b>Ashesi University College</b>, Ashesi Robotics Experience</p>
+                        <p class="position">Mentor</p>
+                        <ul>
+                            <li>Mentored 5 high school students for 1 week and helped them design a Robotic Tour Guide</li>
+                            <li>Supervised and evaluated group projects and weekly tasks</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <p class="date">Nov - Dec 2013</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="detailed-item">
+                        <p class="item-content"><b>Ashesi University College</b>, Berekuso Math Community Project</p>
+                        <p class="position">Tutor</p>
+                        <ul>
+                            <li>Tutored students in Berekuso to help them improve upon their math skills</li>
+                            <li>Organized a weekly math quiz for the students and awarded the winning team with books and stationary</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <p class="date">Jan - Dec 2012</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SKILLS -->
+        <div>
+            <h2>SKILLS</h2>
+            <hr class = "pure-list">
+            <ul>
+                <li>Fluent in French and English</li>
+                <li>Programming Languages (Proficient in Java, C++, SQL, HTML, CSS, PHP, and JavaScript)</li>
+                <li>Graphic designing using software such as Indigo Studio, Balsamic, Pencil, Lumzy</li>
+            </ul>
+        </div>
+        <!-- REFERENCES -->
+        <div>
+            <h2>REFERENCES</h2>
+            <hr class = "pure-list">
+            <p>Available upon request</p>
+        </div>
+        <br>
+        <!-- FOOTER -->
+        <div class = "footer">
+            <p>*Most of the information here is untrue</p>
+            <p><a href="{{ url_for('home') }}" class="cta-button">Back to Team Page</a></p>
+        </div>
+    </div>
+</body>
+</html>

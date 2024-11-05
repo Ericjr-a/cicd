@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lois' Portfolio</title>
+</head>
+<body style="background-color: #f4f4f4; font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
+    <div style="width: 80%; margin: 0 auto; padding: 20px;">
+        <header style="text-align: center; padding: 20px 0; background-color: #333; color: white;">
+            <h1 style="margin-bottom: 10px; background-color: pink;">Lois' Portfolio</h1>
+            <nav>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="display: inline; margin-right: 15px;"><a href="{{ url_for('home') }}" style="color: white; text-decoration: none; font-size: 16px;">Home</a></li>
+                    <li style="display: inline; margin-right: 15px;"><a href="{{ url_for('joana') }}" style="color: white; text-decoration: none; font-size: 16px;">Joana</a></li>
+                    <li style="display: inline; margin-right: 15px;"><a href="{{ url_for('eric') }}" style="color: white; text-decoration: none; font-size: 16px;">Eric</a></li>
+                    <li style="display: inline; margin-right: 15px;"><a href="{{ url_for('kiki') }}" style="color: white; text-decoration: none; font-size: 16px;">Kiki</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section style="text-align: center; margin-top: 50px;">
+            <img src="{{ url_for('static', filename='SKIN.JPG') }}" width="200px" height="200px" alt="Profile Picture">
+
+            <h2 style="font-size: 32px; margin-bottom: 20px;">About Me</h2>
+            <p style="font-size: 18px; margin-bottom: 30px;">Hello, My name is Lois! I enjoy cloud computing. It is a very interesting course and is helping me to learn a lot.</p>
+
+            <h3>Skills</h3>
+            <ul style="font-size: 18px; margin-bottom: 30px; list-style: none; padding: 0;">
+                <li>Machine Learning</li>
+                <li>Cloud Computing</li>
+                <li>Web Technologies</li>
+            </ul>
+
+            <div class="cta">
+                <a href="{{ url_for('home') }}" style="display: inline-block; padding: 10px 20px; background-color: pink; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px;">Back to Team Page</a>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 50px; padding: 10px 0; background-color: #333; color: white;">
+            <p>&copy; All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
