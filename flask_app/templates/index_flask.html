@@ -1,127 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CICD</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CICD</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: Arial, sans-serif;
+			}
 
-        body {
-            background-color: #f4f4f4;
-        }
+			body {
+				background-color: #f4f4f4;
+			}
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
+			.container {
+				width: 80%;
+				margin: 0 auto;
+				padding: 20px;
+			}
 
-        header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #333;
-            color: white;
-        }
+			header {
+				text-align: center;
+				padding: 20px 0;
+				background-color: #333;
+				color: white;
+			}
 
-        header h1 {
-            margin-bottom: 10px;
-        }
+			header h1 {
+				margin-bottom: 10px;
+			}
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
+			nav ul {
+				list-style: none;
+				padding: 0;
+			}
 
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
+			nav ul li {
+				display: inline;
+				margin-right: 15px;
+			}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
+			nav ul li a {
+				color: white;
+				text-decoration: none;
+				font-size: 16px;
+			}
 
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
+			nav ul li a:hover {
+				text-decoration: underline;
+			}
 
-        .content {
-            text-align: center;
-            margin-top: 50px;
-        }
+			.content {
+				text-align: center;
+				margin-top: 50px;
+			}
 
-        .content h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+			.content h2 {
+				font-size: 32px;
+				margin-bottom: 20px;
+			}
 
-        .content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
+			.content p {
+				font-size: 18px;
+				margin-bottom: 30px;
+			}
 
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
+			.cta-button {
+				display: inline-block;
+				padding: 10px 20px;
+				background-color: #007bff;
+				color: white;
+				text-decoration: none;
+				border-radius: 5px;
+				margin-right: 10px;
+			}
 
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
+			.cta-button:hover {
+				background-color: #0056b3;
+			}
 
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 10px 0;
-            background-color: #333;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1> TEAM 6 </h1>
-            <nav>
-                <ul>
-                    <li><a href="{{ url_for('joana') }}">Joana</a></li>
-                    <li><a href="{{ url_for('eric') }}">Ericc</a></li>
-                    <li><a href="{{ url_for('lois') }}">Lois</a></li>
-                    <li><a href="{{ url_for('kiki') }}">Kiki</a></li>
+			footer {
+				text-align: center;
+				margin-top: 50px;
+				padding: 10px 0;
+				background-color: #333;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>TEAM 6</h1>
+				<nav>
+					<ul>
+						<li><a href="{{ url_for('joana') }}">Joana</a></li>
+						<li><a href="{{ url_for('eric') }}">Ericc</a></li>
+						<li><a href="{{ url_for('lois') }}">Lois</a></li>
+						<li><a href="{{ url_for('kiki') }}">Kiki</a></li>
+						<li><a href="{{ url_for('oheneba') }}">Oheneba</a></li>
+					</ul>
+				</nav>
+			</header>
 
-                </ul>
-            </nav>
-        </header>
-        
-        <section class="content">
-            <h2>Lab Activity 6</h2>
-            <p>Practising Continuous Integration, Continuous Development</p>
-            <div class="cta">
-                <a href="{{ url_for('joana') }}" class="cta-button">Joana</a>
-                <a href="{{ url_for('eric') }}" class="cta-button">Eric</a>
-                <a href="{{ url_for('lois') }}" class="cta-button">Lois</a>
-                <a href="{{ url_for('kiki') }}" class="cta-button">Kiki</a>
-                
-            </div>
-        </section>
-        
-        <footer>
-            <p>&copy; 2024 cloudcomputing. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
+			<section class="content">
+				<h2>Lab Activity 6</h2>
+				<p>Practising Continuous Integration, Continuous Development</p>
+				<div class="cta">
+					<a href="{{ url_for('joana') }}" class="cta-button"
+						>Joana</a
+					>
+					<a href="{{ url_for('eric') }}" class="cta-button">Eric</a>
+					<a href="{{ url_for('lois') }}" class="cta-button">Lois</a>
+					<a href="{{ url_for('kiki') }}" class="cta-button">Kiki</a>
+					<a href="{{ url_for('oheneba') }}" class="cta-button"
+						>Oheneba</a
+					>
+				</div>
+			</section>
+
+			<footer>
+				<p>&copy; 2024 cloudcomputing. All rights reserved.</p>
+			</footer>
+		</div>
+	</body>
 </html>
