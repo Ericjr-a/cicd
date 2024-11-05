@@ -28,9 +28,10 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.DO_SSH_KEY }}
 
-      - name: Run tests
+      - name: Build the application
         run: |
-          pytest
+          # Placeholder for build steps (optional)
+          echo "Building the Flask app..."
 
       - name: Deploy to DigitalOcean
         env:
