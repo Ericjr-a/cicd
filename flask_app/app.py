@@ -36,7 +36,7 @@ def kiki():
     return render_template("kiki.html")
 
 
-@app.route("oheneba")
+@app.route("/oheneba")
 def oheneba():
     return render_template("oheneba.html")
 
