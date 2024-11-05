@@ -1,4 +1,4 @@
-name: Deploy Dynamic Website to Digital Ocean
+name: Deploy Flask App to Digital Ocean
 
 on:
   push:
@@ -37,5 +37,5 @@ jobs:
             source venv/bin/activate && \
             pip install --upgrade pip && \
             pip install -r flask_app/requirements.txt && \
-            systemctl restart your-app.service || echo 'Failed to restart service' \
+            sudo systemctl restart flask_app.service || echo 'Service restart failed' \
           "
