@@ -28,18 +28,9 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.DO_SSH_KEY }}
 
-      - name: Deploy to DigitalOcean
-          pip install -r flask_app/requirements.txt
-
       - name: Run tests
         run: |
-          # Run any tests you have here
           pytest
-
-      - name: Build the application
-        run: |
-          # Placeholder for build steps (optional)
-          echo "Building the Flask app..."
 
       - name: Deploy to DigitalOcean
         env:
@@ -53,9 +44,4 @@ jobs:
             pip install --upgrade pip && \
             pip install -r flask_app/requirements.txt && \
             sudo systemctl restart flask_app.service || echo 'Service restart failed' \
-            python3 -m venv /root/cicd/venv && \
-            source /root/cicd/venv/bin/activate && \
-            pip install --upgrade pip && \
-            pip install -r flask_app/requirements.txt && \
-            systemctl restart your-app.service \
           "
