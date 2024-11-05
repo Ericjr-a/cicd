@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joana's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Joana's Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('joana') }}">Joana</a></li>
+                    <li><a href="{{ url_for('eric') }}">Eric</a></li>
+                    <li><a href="{{ url_for('lois') }}">Lois</a></li>
+                    <li><a href="{{ url_for('kiki') }}">Kiki</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="content">
+            <h2>About Me</h2>
+            <p>Hello, My name is Joana! I enjoy cloud computing. It is a very interesting course and is helping me to learn a lot. And Prof. Eboo is the best lecturer!</p>
+
+            <h3>Skills</h3>
+            <ul>
+                <li>Machine Learning</li>
+                <li>Cloud Computing</li>
+                <li>Web Technologies</li>
+            </ul>
+
+            <br>
+            <div class="cta">
+<a href="{{ url_for('home') }}" class="cta-button" style="background-color: pink;">Back to Team Page</a>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
