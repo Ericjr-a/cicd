@@ -1,5 +1,4 @@
 name: Deploy Flask App to Digital Ocean
-name: Deploy Dynamic Website to Digital Ocean
 
 on:
   push:
@@ -30,7 +29,7 @@ jobs:
           ssh-private-key: ${{ secrets.DO_SSH_KEY }}
 
       - name: Deploy to DigitalOcean
-          pip install -r flask_app/requirements.txt  
+          pip install -r flask_app/requirements.txt
 
       - name: Run tests
         run: |
