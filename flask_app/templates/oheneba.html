@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Steph's Portfolio</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: Arial, sans-serif;
+			}
+
+			body {
+				background-color: #f4f4f4;
+			}
+
+			.container {
+				width: 80%;
+				margin: 0 auto;
+				padding: 20px;
+			}
+
+			header {
+				text-align: center;
+				padding: 20px 0;
+				background-color: #333;
+				color: white;
+			}
+
+			header h1 {
+				margin-bottom: 10px;
+			}
+
+			nav ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			nav ul li {
+				display: inline;
+				margin-right: 15px;
+			}
+
+			nav ul li a {
+				color: white;
+				text-decoration: none;
+				font-size: 16px;
+			}
+
+			nav ul li a:hover {
+				text-decoration: underline;
+			}
+
+			.content {
+				text-align: center;
+				margin-top: 50px;
+			}
+
+			.content h2 {
+				font-size: 32px;
+				margin-bottom: 20px;
+			}
+
+			.content p {
+				font-size: 18px;
+				margin-bottom: 30px;
+			}
+
+			.cta-button {
+				display: inline-block;
+				padding: 10px 20px;
+				background-color: #007bff;
+				color: white;
+				text-decoration: none;
+				border-radius: 5px;
+				margin-right: 10px;
+			}
+
+			.cta-button:hover {
+				background-color: #0056b3;
+			}
+
+			footer {
+				text-align: center;
+				margin-top: 50px;
+				padding: 10px 0;
+				background-color: #333;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Steph's Portfolio</h1>
+				<nav>
+					<ul>
+						<li><a href="{{ url_for('home') }}">Home</a></li>
+						<li><a href="{{ url_for('joana') }}">Joana</a></li>
+						<li><a href="{{ url_for('lois') }}">Lois</a></li>
+						<li><a href="{{ url_for('kiki') }}">Kiki</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<section class="content">
+				<h2>About Me</h2>
+				<p>Hello, My name is Steph! I am the GOAT.</p>
+
+				<h3>Skills</h3>
+
+				3PT Shooting<br />
+				Fatherhood<br />
+
+				<br />
+				<div class="cta">
+					<a href="{{ url_for('home') }}" class="cta-button"
+						>Back to Team Page</a
+					>
+				</div>
+			</section>
+
+			<footer>
+				<p>&copy; All rights reserved.</p>
+			</footer>
+		</div>
+	</body>
+</html>
