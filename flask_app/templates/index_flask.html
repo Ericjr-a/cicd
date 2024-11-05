@@ -94,35 +94,33 @@
 </head>
 <body>
     <div class="container">
-        <header style="background-color: pink;">
-            <h1>Lois' Portfolio</h1>
+        <header>
+            <h1> TEAM 6 </h1>
             <nav>
                 <ul>
                     <li><a href="{{ url_for('joana') }}">Joana</a></li>
                     <li><a href="{{ url_for('eric') }}">Eric</a></li>
                     <li><a href="{{ url_for('lois') }}">Lois</a></li>
                     <li><a href="{{ url_for('kiki') }}">Kiki</a></li>
+
                 </ul>
             </nav>
         </header>
-
+        
         <section class="content">
-            <img src="SKIN.JPG" width="200px" height="200px">
-            <h2>About Me</h2>
-            <p>Hello, My name is Lois! I enjoy cloud computing. It is a very interesting course and is helping me to learn a lot.</p>
-            <h3>Skills</h3>
-            <ul>
-                <li>Machine Learning</li>
-                <li>Cloud Computing</li>
-                <li>Web Technologies</li>
-            </ul>
+            <h2>Lab Activity 6</h2>
+            <p>Practising Continuous Integration, Continuous Development</p>
             <div class="cta">
-                <a href="index.html" class="cta-button" style="background-color: pink;">Back to Team Page</a>
+                <li><a href="{{ url_for('joana') }}">Joana</a></li>
+                <li><a href="{{ url_for('eric') }}">Eric</a></li>
+                <li><a href="{{ url_for('lois') }}">Lois</a></li>
+                <li><a href="{{ url_for('kiki') }}">Kiki</a></li>
+
             </div>
         </section>
-
+        
         <footer>
-            <p style="background-color: pink;">&copy; All rights reserved.</p>
+            <p>&copy; 2024 cloudcomputing. All rights reserved.</p>
         </footer>
     </div>
 </body>
